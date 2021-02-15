@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import Clock from './components/clock'
+import Toggle from './components/toggle'
+import ThemeContext, { Mode } from './providers/theme'
+import cls from 'classnames'
+import './App.scss'
 
 function App() {
+  const [mode, setMode] = useState<Mode>('dark')
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ThemeContext.Provider value={{ mode, setMode }}>
+      <div className={cls('App', mode === 'light' && 'light')}>
+        <header className="header">
+          <Toggle />
+        </header>
+        <main>
+          <Clock />
+        </main>
+      </div>
+    </ThemeContext.Provider>
+  )
 }
 
-export default App;
+export default App

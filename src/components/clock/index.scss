@@ -1,0 +1,12 @@
+.clock {
+  color: #fff;
+  font-size: 15vw;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clock.light {
+  color: #000;
+}

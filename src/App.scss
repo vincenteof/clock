@@ -1,0 +1,23 @@
+.App {
+  height: 100vh;
+  background: #000;
+
+  header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 20px;
+    height: 8vh;
+  }
+
+  main {
+    height: 92vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.App.light {
+  background: #fff;
+}
