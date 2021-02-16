@@ -1,5 +1,5 @@
 .clock {
-  color: #fff;
+  color: #000;
   font-size: 15vw;
   user-select: none;
   display: flex;
@@ -7,6 +7,6 @@
   justify-content: center;
 }
 
-.clock.light {
-  color: #000;
+.clock.dark {
+  color: #fff;
 }

@@ -1,6 +1,6 @@
 .App {
   height: 100vh;
-  background: #000;
+  background: #fff;
 
   header {
     display: flex;
@@ -18,6 +18,6 @@
   }
 }
 
-.App.light {
-  background: #fff;
+.App.dark {
+  background: #000;
 }

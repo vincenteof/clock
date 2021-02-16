@@ -1,17 +1,17 @@
 import React, { useState } from 'react'
 import Clock from './components/clock'
-import Toggle from './components/toggle'
+import Switch from './components/switch'
 import ThemeContext, { Mode } from './providers/theme'
 import cls from 'classnames'
 import './App.scss'
 
 function App() {
-  const [mode, setMode] = useState<Mode>('dark')
+  const [mode, setMode] = useState<Mode>('light')
   return (
     <ThemeContext.Provider value={{ mode, setMode }}>
-      <div className={cls('App', mode === 'light' && 'light')}>
+      <div className={cls('App', mode === 'dark' && 'dark')}>
         <header className="header">
-          <Toggle />
+          <Switch />
         </header>
         <main>
           <Clock />

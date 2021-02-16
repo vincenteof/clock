@@ -21,7 +21,7 @@ const Clock: FC<ClockProps> = () => {
   const minute = now.minute()
 
   return (
-    <div className={cls('clock', mode === 'light' && 'light')}>
+    <div className={cls('clock', mode === 'dark' && 'dark')}>
       <span>{formatNumber(hour)}</span>
       <span>:</span>
       <span>{formatNumber(minute)}</span>

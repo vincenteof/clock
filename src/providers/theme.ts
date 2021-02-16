@@ -7,5 +7,5 @@ type IThemeContext = {
 }
 
 export default createContext<IThemeContext>({
-  mode: 'dark',
+  mode: 'light',
 })
