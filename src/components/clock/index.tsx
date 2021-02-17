@@ -19,7 +19,7 @@ const Clock: FC<ClockProps> = () => {
   const now = dayjs()
   const hour = now.hour()
   const minute = now.minute()
-  const dateStr = now.format('MM月DD日')
+  const dateStr = now.format('M月DD日')
   const weekStr = weekdayCh(now.day() as any)
 
   return (
